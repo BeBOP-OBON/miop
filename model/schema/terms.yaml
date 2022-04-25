@@ -169,6 +169,52 @@ slots:
     - value: Kathleen Johnson Pitz
     slot_uri: DCMI:contributor
     slot_uri: MIOP:0000011
+  materials_required:
+    is_a: core field
+    title: materials_required
+    description: >
+      Terms to identify the key resources needed to complete the protocol [e.g., Illumina
+      MiSeq (EFO:0004205), centrifuge (OBI:0400106)]. When possible use controlled vocabuliaries using (namespace:ID).
+    range: string
+    multivalued: true
+    examples:
+    - value: Illumina MiSeq [EFO:0004205]
+    - value: centrifuge [OBI:0400106]
+    - value: InnovaPrep FluidPrep CP Select
+    - value: ZymoBIOMICS™ Fecal Reference with TruMatrix™ Technology
+    - value: GenapSys Sequencer
+    slot_uri: MIOP:0000012
+  skills_required:
+    is_a: core field
+    title: skills_required
+    description: >
+      Description of expertise required to execute protocol.
+    range: string
+    multivalued: true
+    examples:
+    - value: molecular biologist with experience in PCR
+    slot_uri: MIOP:0000013
+  time_required:
+    is_a: core field
+    title: time_required
+    description: >
+      Number of minutes required to complete protocol (round up to nearest whole number).
+    range: integer
+    multivalued: false
+    examples:
+    - value: 10
+    slot_uri: MIOP:0000014
+  personnel_required:
+    is_a: core field
+    title: personnel_required
+    description: >
+      Recommended number of people required to execute protocol. For example, when deploying an instrument or 
+      when scuba diving, or doing ice work you may need a minimum number of individuals.
+    range: integer
+    multivalued: false
+    examples:
+    - value: 2
+    slot_uri: MIOP:0000015
 enums:
    meth_cat_enum:
     permissible_values:
