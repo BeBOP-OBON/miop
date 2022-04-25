@@ -43,10 +43,9 @@ slots:
     is_a: core field
     title: project
     description: >
-      Details about the project (e.g., Name, Affiliation, website). May also includes a field
-      for tagging any projects that protocols are compliant with (e.g., Earth Microbiome Project/TARA Oceans).
-      Once submitted the relevant PI may be notified and could choose to endorse or reject the protocol as compliant
-      with their project.
+      Details about the project that generated this version of the protocol (e.g., full name of project, acronym(s), 
+      principle investigator, lead institute(s), persistant website, funding agency). If possible please provide the 
+      most consistent URI associated with your project (e.g. Cordis Project ID for EU projects).
     range: string
     multivalued: false
     examples:
