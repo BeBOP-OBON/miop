@@ -74,21 +74,6 @@ slots:
     - value: aliquot concentration
     - value: DNA extraction
     slot_uri: MIOP:0000003
-  resources:
-    is_a: core field
-    title: resources
-    description: >
-      Terms to identify the key resources needed to complete the protocol [e.g., Illumina
-      MiSeq (EFO:0004205), centrifuge (OBI:0400106)]
-    range: string
-    multivalued: true
-    examples:
-    - value: Illumina MiSeq [EFO:0004205]
-    - value: centrifuge [OBI:0400106]
-    - value: InnovaPrep FluidPrep CP Select
-    - value: ZymoBIOMICS™ Fecal Reference with TruMatrix™ Technology
-    - value: GenapSys Sequencer
-    slot_uri: MIOP:0000004
   analyses:
     is_a: core field
     title: analyses
