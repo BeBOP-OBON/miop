@@ -209,9 +209,8 @@ enums:
       data management: {}
       sampling collection procedure: {}
       bioinformatics: {}
-      contextual metadata analytical procedures: {}
+      contextual field data: {}
       sample extraction and purification: {}
-      omics sequencing procedures: {}
+      omics analysis: {}
       sample archiving or biobanking: {}
-      quantitative amplification: {}
       data analysis: {}
