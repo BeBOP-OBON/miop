@@ -7,6 +7,8 @@ prefixes:
   linkml: https://w3id.org/linkml/
   miop.vocab: https://w3id.org/miop/vocab/
   MIOP: https://w3id.org/miop/terms/
+  dc: http://purl.org/dc/terms/
+  # dce: http://purl.org/dc/elements/1.1/
 default_prefix: miop.vocab
 slots:
   core field:
@@ -200,6 +202,17 @@ slots:
     examples:
     - value: 2
     slot_uri: MIOP:0000015
+  language:
+    is_a: core field
+    title: language
+    description: >
+      A language of the resource.
+    range: string
+    multivalued: true
+    examples:
+    - value: en
+    - value: es
+    slot_uri: dc:language
 enums:
    meth_cat_enum:
     permissible_values:
