@@ -244,6 +244,18 @@ slots:
     - value: classroom
     - value: managers
     slot_uri: dc:audience
+  publisher:
+   is_a: core field
+    title: publisher
+    description: >
+      An entity responsible for making the resource available.
+    range: string
+    multivalued: true
+    examples:
+    - value: Nature
+    - value: Woods Hole Oceanographic Institution
+    - value: Chavez Lab
+    slot_uri: dc:publisher
 enums:
    meth_cat_enum:
     permissible_values:
