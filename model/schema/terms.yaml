@@ -146,17 +146,19 @@ slots:
     - value: Polaribacter [NCBITaxon:1642819]
     - value: 16S Mitochondrial Ribosomal RNA [NCIT:C131261]
     slot_uri: MIOP:00000010
-  contributor:
+  creator:
     is_a: core field
-    title: contributor
+    title: creator
     description: >
-      An entity responsible for making contributions to the resource.
+      An entity responsible for making the resource.
+    rdfs:comment: >
+      Recommended practice is to identify the creator with a URI. If this is not possible or feasible, 
+      a literal value that identifies the creator may be provided.
     range: string
     multivalued: true
     examples:
     - value: Kathleen Johnson Pitz
-    slot_uri: DCMI:contributor
-    slot_uri: MIOP:0000011
+    slot_uri: dc:creator
   materials_required:
     is_a: core field
     title: materials_required
