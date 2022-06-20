@@ -256,6 +256,20 @@ slots:
     - value: Woods Hole Oceanographic Institution
     - value: Chavez Lab
     slot_uri: dc:publisher
+  hasVersion:
+   is_a: core field
+    title: hasVersion
+    description: >
+      A related resource that is a version, edition, or adaptation of the described resource.
+    rdfs:comment: >
+    Changes in version imply substantive changes in content rather than differences in format. 
+    This property is intended to be used with non-literal values. This property is an inverse property of Is Version Of.
+    range: string
+    multivalued: false
+    examples:
+    - value: 1.1.2
+    - value: 0.2
+    slot_uri: dc:hasVersion
 enums:
    meth_cat_enum:
     permissible_values:
