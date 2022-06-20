@@ -9,6 +9,7 @@ prefixes:
   MIOP: https://w3id.org/miop/terms/
   dc: http://purl.org/dc/terms/
   # dce: http://purl.org/dc/elements/1.1/
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
 default_prefix: miop.vocab
 slots:
   core field:
@@ -213,6 +214,34 @@ slots:
     - value: en
     - value: es
     slot_uri: dc:language
+  issued:
+    is_a: core field
+    title: issued
+    description: >
+      Date of formal issuance of the resource.
+    rdfs:comment: >
+      Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, 
+      of which this is a subproperty.
+    range: string
+    multivalued: true
+    examples:
+    - value: 2012-02
+    - value: 2015
+    slot_uri: dc:issued
+  audience:
+   is_a: core field
+    title: audience
+    description: >
+      A class of agents for whom the resource is intended or useful.
+    rdfs:comment: >
+      Recommended practice is to use this property with non-literal values from a vocabulary of audience types.
+    range: string
+    multivalued: true
+    examples:
+    - value: scientists
+    - value: classroom
+    - value: managers
+    slot_uri: dc:audience
 enums:
    meth_cat_enum:
     permissible_values:
