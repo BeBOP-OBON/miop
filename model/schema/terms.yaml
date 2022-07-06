@@ -100,6 +100,7 @@ slots:
     examples:
     - value: Hawaii Ocean Time-series Site [GAZ:00187530]
     - value: Western English Channel Sampling Stations [GAZ:00187525]
+    - value: Monterey Bay [GAZ:00002509], California Current [GAZ:00000346]
     slot_uri: MIOP:0000006
   broad-scale environmental context:
     is_a: core field
