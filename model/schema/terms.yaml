@@ -7,6 +7,7 @@ prefixes:
   linkml: https://w3id.org/linkml/
   miop.vocab: https://w3id.org/miop/vocab/
   MIOP: https://w3id.org/miop/terms/
+  MIXS: https://w3id.org/mixs/terms/
   dc: http://purl.org/dc/terms/
   # dce: http://purl.org/dc/elements/1.1/
   rdfs: http://www.w3.org/2000/01/rdf-schema#
@@ -101,7 +102,7 @@ slots:
     - value: Hawaii Ocean Time-series Site [GAZ:00187530]
     - value: Western English Channel Sampling Stations [GAZ:00187525]
     - value: Monterey Bay [GAZ:00002509], California Current [GAZ:00000346]
-    slot_uri: MIOP:0000006
+    slot_uri: MIXS:0000010
   broad-scale environmental context:
     is_a: core field
     title: broad-scale environmental context
@@ -112,7 +113,7 @@ slots:
     multivalued: true
     examples:
     - value: oceanic epipelagic zone biome [ENVO:01000033]
-    slot_uri: MIOP:0000007
+    slot_uri: MIXS:0000012
   local environmental context:
     is_a: core field
     title: local environmental context
@@ -123,7 +124,7 @@ slots:
     multivalued: true
     examples:
     - value: seasonal thermocline [ENVO:01000107]
-    slot_uri: MIOP:0000008
+    slot_uri: MIXS:0000013
   environmental medium:
     is_a: core field
     title: environmental medium
@@ -134,7 +135,7 @@ slots:
     multivalued: true
     examples:
     - value: ocean water [ENVO:00002151]
-    slot_uri: MIOP:0000009
+    slot_uri: MIXS:0000014
   target:
     is_a: core field
     title: target
