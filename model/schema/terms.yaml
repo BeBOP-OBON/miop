@@ -284,6 +284,21 @@ slots:
     - value: All rights reserved
     - value: CC BY 4.0
     slot_uri: dc:license
+ maturity_level:
+   is_a: core field
+    title: maturity level
+    description: >
+      Enter the maturity level of the methodology in the document. 
+      Mature: Methodologies are well demonstrated for a given objective, documented and peer reviewed; methods are commonly used by more than one organization.
+      Pilot or Demonstrated: Methodologies are being demonstrated and validated; limited consensus exists on widespread use or in any given situation.
+      Concept: A methodology is being developed at one institution(s) but has not been agreed to by the community; requirements and form for a methodology are understood.
+    range: string
+    multivalued: false
+    examples:
+    - value: Mature
+    - value: Pilot
+    - value: Concept
+    slot_uri: MIOP:0000014
 enums:
    meth_cat_enum:
     permissible_values:
