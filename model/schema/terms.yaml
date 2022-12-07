@@ -272,6 +272,18 @@ slots:
     - value: 1.1.2
     - value: 0.2
     slot_uri: dc:hasVersion
+  license:
+   is_a: core field
+    title: license
+    description: >
+      A legal document giving official permission to do something with the resource.
+    range: string
+    multivalued: true
+    examples:
+    - value: Public Domain (CC0) 
+    - value: All rights reserved
+    - value: CC BY 4.0
+    slot_uri: dc:license
 enums:
    meth_cat_enum:
     permissible_values:
