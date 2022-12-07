@@ -89,7 +89,7 @@ slots:
     examples:
     - value: amplicon sequencing assay[OBI:0002767]
     - value: polymerase chain reaction[OBI:0002692]
-    slot_uri: MIOP:0000005
+    slot_uri: MIOP:0000004
   geographic location:
     is_a: core field
     title: geographic location
@@ -102,7 +102,7 @@ slots:
     - value: Hawaii Ocean Time-series Site [GAZ:00187530]
     - value: Western English Channel Sampling Stations [GAZ:00187525]
     - value: Monterey Bay [GAZ:00002509], California Current [GAZ:00000346]
-    slot_uri: MIXS:0000010
+    slot_uri: MIXS:0000005
   broad-scale environmental context:
     is_a: core field
     title: broad-scale environmental context
@@ -113,7 +113,7 @@ slots:
     multivalued: true
     examples:
     - value: oceanic epipelagic zone biome [ENVO:01000033]
-    slot_uri: MIXS:0000012
+    slot_uri: MIXS:0000006
   local environmental context:
     is_a: core field
     title: local environmental context
@@ -124,7 +124,7 @@ slots:
     multivalued: true
     examples:
     - value: seasonal thermocline [ENVO:01000107]
-    slot_uri: MIXS:0000013
+    slot_uri: MIXS:0000007
   environmental medium:
     is_a: core field
     title: environmental medium
@@ -135,7 +135,7 @@ slots:
     multivalued: true
     examples:
     - value: ocean water [ENVO:00002151]
-    slot_uri: MIXS:0000014
+    slot_uri: MIXS:0000008
   target:
     is_a: core field
     title: target
@@ -147,7 +147,7 @@ slots:
     examples:
     - value: Polaribacter [NCBITaxon:1642819]
     - value: 16S Mitochondrial Ribosomal RNA [NCIT:C131261]
-    slot_uri: MIOP:00000010
+    slot_uri: MIOP:0000009
   creator:
     is_a: core field
     title: creator
@@ -175,7 +175,7 @@ slots:
     - value: InnovaPrep FluidPrep CP Select
     - value: ZymoBIOMICS™ Fecal Reference with TruMatrix™ Technology
     - value: GenapSys Sequencer
-    slot_uri: MIOP:0000012
+    slot_uri: MIOP:0000010
   skills_required:
     is_a: core field
     title: skills_required
@@ -185,7 +185,7 @@ slots:
     multivalued: true
     examples:
     - value: molecular biologist with experience in PCR
-    slot_uri: MIOP:0000013
+    slot_uri: MIOP:0000011
   time_required:
     is_a: core field
     title: time_required
@@ -195,7 +195,7 @@ slots:
     multivalued: false
     examples:
     - value: 10
-    slot_uri: MIOP:0000014
+    slot_uri: MIOP:0000012
   personnel_required:
     is_a: core field
     title: personnel_required
@@ -206,7 +206,7 @@ slots:
     multivalued: false
     examples:
     - value: 2
-    slot_uri: MIOP:0000015
+    slot_uri: MIOP:0000013
   language:
     is_a: core field
     title: language
