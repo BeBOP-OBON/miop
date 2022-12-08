@@ -15,11 +15,11 @@ default_prefix: miop.vocab
 slots:
   core field:
     abstract: true
-    description: MIOP field determined to be essential across all protocols
+    description: MIOP field determined to be essential across all protocols, can be mandatory or optional
   society field:
     abstract: true
-    description: placeholder to match our 
-      belongs
+    description: placeholder to match future potential packages championed by dedicated communities, e.g. for the Ocean 
+      Biomolecular Observing Network (OBON) or the Omic Biodiversity Observation Network (Omic BON).
   meth_cat:
     is_a: core field
     title: methodology category 
@@ -74,23 +74,21 @@ slots:
     multivalued: true
     examples:
     - value: time series design [OBI:0500020]
-    - value: taxonomic diversity assessment by targeted gene survey [OBI:0001960]
-    - value: aliquot concentration
-    - value: DNA extraction
+    - value: time series design [OBI:0500020] | taxonomic diversity assessment by targeted gene survey [OBI:0001960]
     slot_uri: MIOP:0000003
   analyses:
     is_a: core field
     title: analyses
     description: >
       Terms to describe the types of analyses used inthe protocol [e.g., amplicon sequencing
-      assay[OBI:0002767] or polymerase chain reaction[OBI:0002692]]
+      assay[OBI:0002767] or polymerase chain reaction [OBI:0002692]]
     range: string
     multivalued: true
     examples:
     - value: amplicon sequencing assay[OBI:0002767]
-    - value: polymerase chain reaction[OBI:0002692]
+    - value: amplicon sequencing assay[OBI:0002767] | polymerase chain reaction[OBI:0002692]
     slot_uri: MIOP:0000004
-  geographic location:
+  geographic_location:
     is_a: core field
     title: geographic location
     description: >
@@ -99,11 +97,10 @@ slots:
     range: string
     multivalued: true
     examples:
-    - value: Hawaii Ocean Time-series Site [GAZ:00187530]
-    - value: Western English Channel Sampling Stations [GAZ:00187525]
-    - value: Monterey Bay [GAZ:00002509], California Current [GAZ:00000346]
+    - value: Monterey Bay [GAZ:00002509]
+    - value: Monterey Bay [GAZ:00002509] | FRAM Strait [GAZ:00000060]
     slot_uri: MIXS:0000005
-  broad-scale environmental context:
+  broad-scale_environmental_context:
     is_a: core field
     title: broad-scale environmental context
     description: >
@@ -113,28 +110,31 @@ slots:
     multivalued: true
     examples:
     - value: oceanic epipelagic zone biome [ENVO:01000033]
+    - value: oceanic epipelagic zone biome [ENVO:01000033] | large river delta biome [ENVO:00000889]
     slot_uri: MIXS:0000006
-  local environmental context:
+  local_environmental_context:
     is_a: core field
     title: local environmental context
     description: >
       Environmental features targeted using the protocol 
-      [e.g., seasonal thermocline [ENVO:01000107]]
+      [e.g., seasonal marine thermocline [ENVO:01000107]]
     range: string
     multivalued: true
     examples:
-    - value: seasonal thermocline [ENVO:01000107]
+    - value: seasonal marine thermocline [ENVO:01000107]
+    - value: seasonal marine thermocline [ENVO:01000107] | marine wind mixed layer [ENVO:01000061]
     slot_uri: MIXS:0000007
-  environmental medium:
+  environmental_medium:
     is_a: core field
     title: environmental medium
     description: >
       Identify the environmental or organismal material from which the biological
-      molecule (e.g., DNA/RNA/Protein) was extracted [e.g.,ocean water [ENVO:00002151]]
+      molecule (e.g., DNA/RNA/Protein) was extracted [e.g., sea water [ENVO:00002149]]
     range: string
     multivalued: true
     examples:
-    - value: ocean water [ENVO:00002151]
+    - value: sea water [ENVO:00002149] 
+    - value: sea water [ENVO:00002149] | feces [UBERON:0001988]
     slot_uri: MIXS:0000008
   target:
     is_a: core field
@@ -146,7 +146,7 @@ slots:
     multivalued: true
     examples:
     - value: Polaribacter [NCBITaxon:1642819]
-    - value: 16S Mitochondrial Ribosomal RNA [NCIT:C131261]
+    - value: Polaribacter [NCBITaxon:1642819] | 16S Mitochondrial Ribosomal RNA [NCIT:C131261] 
     slot_uri: MIOP:0000009
   creator:
     is_a: core field
@@ -160,6 +160,7 @@ slots:
     multivalued: true
     examples:
     - value: Kathleen Johnson Pitz
+    - value: Kathleen Johnson Pitz | Raïssa Meyer
     slot_uri: dc:creator
   materials_required:
     is_a: core field
@@ -171,10 +172,7 @@ slots:
     multivalued: true
     examples:
     - value: Illumina MiSeq [EFO:0004205]
-    - value: centrifuge [OBI:0400106]
-    - value: InnovaPrep FluidPrep CP Select
-    - value: ZymoBIOMICS™ Fecal Reference with TruMatrix™ Technology
-    - value: GenapSys Sequencer
+    - value: Illumina MiSeq [EFO:0004205] | centrifuge [OBI:0400106] | ZymoBIOMICS™ Fecal Reference with TruMatrix™ Technology
     slot_uri: MIOP:0000010
   skills_required:
     is_a: core field
@@ -185,6 +183,7 @@ slots:
     multivalued: true
     examples:
     - value: molecular biologist with experience in PCR
+    - value: molecular biologist with experience in PCR | laboratory technician with experience in PCR
     slot_uri: MIOP:0000011
   time_required:
     is_a: core field
@@ -216,7 +215,7 @@ slots:
     multivalued: true
     examples:
     - value: en
-    - value: es
+    - value: en | es
     slot_uri: dc:language
   issued:
     is_a: core field
@@ -225,12 +224,17 @@ slots:
       Date of formal issuance of the resource.
     rdfs:comment: >
       Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, 
-      of which this is a subproperty.
+      of which this is a subproperty: 
+      Recommended practice is to express the date, date/time, or period of time according to ISO 8601-1 [ISO 8601-1] or 
+      a published profile of the ISO standard, such as the W3C Note on Date and Time Formats [W3CDTF] or the Extended 
+      Date/Time Format Specification [EDTF]. If the full date is unknown, month and year (YYYY-MM) or just year (YYYY) 
+      may be used. Date ranges may be specified using ISO 8601 period of time specification in which start and end dates 
+      are separated by a '/' (slash) character. Either the start or end date may be missing.
     range: string
-    multivalued: true
+    multivalued: false
     examples:
-    - value: 2012-02
-    - value: 2015
+    - value: 2012-02-15
+    - value: 2007-03-01T13:00:00Z
     slot_uri: dc:issued
   audience:
    is_a: core field
@@ -243,8 +247,7 @@ slots:
     multivalued: true
     examples:
     - value: scientists
-    - value: classroom
-    - value: managers
+    - value: scientists | classroom | managers
     slot_uri: dc:audience
   publisher:
    is_a: core field
@@ -252,11 +255,11 @@ slots:
     description: >
       An entity responsible for making the resource available.
     range: string
-    multivalued: true
+    multivalued: false
     examples:
     - value: Nature
     - value: Woods Hole Oceanographic Institution
-    - value: Chavez Lab
+    - value: Monterey Bay Aquarium Research Institute, Chavez Lab
     slot_uri: dc:publisher
   hasVersion:
    is_a: core field
@@ -278,7 +281,7 @@ slots:
     description: >
       A legal document giving official permission to do something with the resource.
     range: string
-    multivalued: true
+    multivalued: false
     examples:
     - value: Public Domain (CC0) 
     - value: All rights reserved
