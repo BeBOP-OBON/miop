@@ -27,7 +27,7 @@ slots:
       Methodology category which the uploaded protocol belongs to. This links to the associated 
       methodology categories which precede and succeed it in the workflow, to facilitate the linking of protocols 
       into entire workflows, while keeping granularity and flexibility. This will enable the mixing and matching of 
-      protocol modules from various uploaded workflows
+      protocol modules from various uploaded workflows.
     range: meth_cat_enum
     multivalued: false
     examples:
@@ -54,7 +54,7 @@ slots:
     multivalued: false
     examples:
     - value: Moorea BioCode, https://www.moorea.berkeley.edu/programs/research/moorea-biocode
-    - value: 
+    - value: Improving and integrating European ocean observing and forecasting systems for sustainable use of the oceans, EuroSea, Toste Tanhua, Alfred Wegener Institute Helmholtz Centre for Polar and Marine Research, https://eurosea.eu, EU Horizon2020, Grant agreement ID: 862626
     comments: 
     aliases:
     - source project
@@ -68,68 +68,75 @@ slots:
     is_a: core field
     title: purpose
     description: > 
-     Terms to describe the purpose of the omics research. [e.g., time series design
-     (OBI:0500020) or taxonomic diversity assessment by targeted gene survey (OBI:0001960)].
+      Terms to describe the purpose of the omics research. This field accepts ontology terms from the 
+      Ontology for Biomedical Investigations (OBI). For a browser of OBI (v 2022-07-11) terms, please see 
+      https://www.ebi.ac.uk/ols/ontologies/obi.
     range: string
     multivalued: true
     examples:
     - value: time series design [OBI:0500020]
-    - value: time series design [OBI:0500020] | taxonomic diversity assessment by targeted gene survey [OBI:0001960]
+    - value: time series design [OBI:0500020]|taxonomic diversity assessment by targeted gene survey [OBI:0001960]
     slot_uri: MIOP:0000003
   analyses:
     is_a: core field
     title: analyses
     description: >
-      Terms to describe the types of analyses used inthe protocol [e.g., amplicon sequencing
-      assay[OBI:0002767] or polymerase chain reaction [OBI:0002692]]
+      Terms to describe the types of analyses used in the protocol. This field accepts ontology terms from the 
+      Ontology for Biomedical Investigations (OBI). For a browser of OBI (v 2022-07-11) terms, please see 
+      https://www.ebi.ac.uk/ols/ontologies/obi.
     range: string
     multivalued: true
     examples:
-    - value: amplicon sequencing assay[OBI:0002767]
-    - value: amplicon sequencing assay[OBI:0002767] | polymerase chain reaction[OBI:0002692]
+    - value: amplicon sequencing assay [OBI:0002767]
+    - value: amplicon sequencing assay [OBI:0002767]|polymerase chain reaction [OBI:0002692]
     slot_uri: MIOP:0000004
   geographic_location:
     is_a: core field
     title: geographic location
     description: >
-      Geographic location/s in which the protocol hasbeen used [e.g., Hawaii Ocean Time-series
-      Site [GAZ:00187530], Western English Channel Sampling Stations [GAZ:00187525]]
+      Geographic location(s) in which the protocol has been used. This field accepts ontology terms from the 
+      GAZ ontology. For a browser of GAZ terms, please see https://www.ebi.ac.uk/ols/ontologies/gaz.
     range: string
     multivalued: true
     examples:
     - value: Monterey Bay [GAZ:00002509]
-    - value: Monterey Bay [GAZ:00002509] | FRAM Strait [GAZ:00000060]
+    - value: Monterey Bay [GAZ:00002509]|FRAM Strait [GAZ:00000060]
     slot_uri: MIXS:0000005
   broad-scale_environmental_context:
     is_a: core field
     title: broad-scale environmental context
     description: >
-      Biomes in which the protocol was successfully used 
-      [e.g., oceanic epipelagic zone biome [ENVO:01000033]]
+      Biomes in which the protocol was successfully used. This field accepts ontology terms from the 
+      Environment Ontology (ENVO). For a browser of ENVO (v 2021-05-14) terms, please see 
+      https://www.ebi.ac.uk/ols/ontologies/envo.
     range: string
     multivalued: true
     examples:
     - value: oceanic epipelagic zone biome [ENVO:01000033]
-    - value: oceanic epipelagic zone biome [ENVO:01000033] | large river delta biome [ENVO:00000889]
+    - value: oceanic epipelagic zone biome [ENVO:01000033]|large river delta biome [ENVO:00000889]
     slot_uri: MIXS:0000006
   local_environmental_context:
     is_a: core field
     title: local environmental context
     description: >
-      Environmental features targeted using the protocol 
-      [e.g., seasonal marine thermocline [ENVO:01000107]]
+      Environmental features targeted using the protocol. This field accepts ontology terms from the 
+      Environment Ontology (ENVO). For a browser of ENVO (v 2021-05-14) terms, please see 
+      https://www.ebi.ac.uk/ols/ontologies/envo.
     range: string
     multivalued: true
     examples:
     - value: seasonal marine thermocline [ENVO:01000107]
-    - value: seasonal marine thermocline [ENVO:01000107] | marine wind mixed layer [ENVO:01000061]
+    - value: seasonal marine thermocline [ENVO:01000107]|marine wind mixed layer [ENVO:01000061]
     slot_uri: MIXS:0000007
   environmental_medium:
     is_a: core field
     title: environmental medium
     description: >
       Identify the environmental or organismal material from which the biological
-      molecule (e.g., DNA/RNA/Protein) was extracted [e.g., sea water [ENVO:00002149]]
+      molecule (e.g., DNA/RNA/Protein) was extracted. This field accepts ontology terms from the 
+      Environment Ontology (ENVO) and/or the Uber-anatomy ontology (UBERON). For a browser of ENVO 
+      (v 2021-05-14) terms, please see https://www.ebi.ac.uk/ols/ontologies/envo; for a browser of
+      UBERON (2022-09-30) terms, please see https://www.ebi.ac.uk/ols/ontologies/uberon.
     range: string
     multivalued: true
     examples:
@@ -140,13 +147,15 @@ slots:
     is_a: core field
     title: target
     description: >
-      Identify the target taxa, gene and/or moleculefor the protocol [e.g., Polaribacter [NCBITaxon:1642819],
-      16S Mitochondrial Ribosomal RNA [NCIT:C131261]].
+      Identify the target taxa, gene and/or molecule for the protocol. This field accepts terms 
+      from ncbitaxon (NCBITAXON) and/or NCI Thesaurus OBO Edition (NCIT). For a browser of 
+      NCBITAXON (v 2022-08-18) terms, please see https://www.ebi.ac.uk/ols/ontologies/ncbitaxon; for 
+      a browser of NCIT (v 22.07d) terms, please see https://www.ebi.ac.uk/ols/ontologies/ncit.
     range: string
     multivalued: true
     examples:
     - value: Polaribacter [NCBITaxon:1642819]
-    - value: Polaribacter [NCBITaxon:1642819] | 16S Mitochondrial Ribosomal RNA [NCIT:C131261] 
+    - value: Polaribacter [NCBITaxon:1642819]|16S Mitochondrial Ribosomal RNA [NCIT:C131261] 
     slot_uri: MIOP:0000009
   creator:
     is_a: core field
@@ -159,20 +168,24 @@ slots:
     range: string
     multivalued: true
     examples:
-    - value: Kathleen Johnson Pitz
-    - value: Kathleen Johnson Pitz | Raïssa Meyer
+    - value: Kathleen Johnson Pitz, https://orcid.org/0000-0002-4931-8592
+    - value: Kathleen Johnson Pitz, https://orcid.org/0000-0002-4931-8592|Raïssa Meyer, https://orcid.org/0000-0002-2996-719X
     slot_uri: dc:creator
   materials_required:
     is_a: core field
     title: materials_required
     description: >
-      Terms to identify the key resources needed to complete the protocol [e.g., Illumina
-      MiSeq (EFO:0004205), centrifuge (OBI:0400106)]. When possible use controlled vocabuliaries using (namespace:ID).
+      Terms to identify the key resources needed to complete the protocol. When possible 
+      use controlled vocabuliaries using (namespace:ID).
+      This field accepts ontology terms from the Ontology for Biomedical Investigations (OBI)
+      and/or the Experimental Factor Ontology (EFO). For a browser of OBI (v 2022-07-11) terms, please see 
+      https://www.ebi.ac.uk/ols/ontologies/obi; for a browser of EFO (v 3.49.0) terms, please see
+      https://www.ebi.ac.uk/ols/ontologies/efo. 
     range: string
     multivalued: true
     examples:
     - value: Illumina MiSeq [EFO:0004205]
-    - value: Illumina MiSeq [EFO:0004205] | centrifuge [OBI:0400106] | ZymoBIOMICS™ Fecal Reference with TruMatrix™ Technology
+    - value: Illumina MiSeq [EFO:0004205]|centrifuge [OBI:0400106]|ZymoBIOMICS™ Fecal Reference with TruMatrix™ Technology
     slot_uri: MIOP:0000010
   skills_required:
     is_a: core field
@@ -183,7 +196,7 @@ slots:
     multivalued: true
     examples:
     - value: molecular biologist with experience in PCR
-    - value: molecular biologist with experience in PCR | laboratory technician with experience in PCR
+    - value: molecular biologist with experience in PCR|laboratory technician with experience in PCR
     slot_uri: MIOP:0000011
   time_required:
     is_a: core field
@@ -210,12 +223,14 @@ slots:
     is_a: core field
     title: language
     description: >
-      A language of the resource.
+      A language of the resource. Recommended practice is to use either a non-literal value 
+      representing a language from a controlled vocabulary such as ISO 639-2 or ISO 639-3, 
+      or a literal value consisting of an IETF Best Current Practice 47 [IETF-BCP47] language tag.
     range: string
     multivalued: true
     examples:
     - value: en
-    - value: en | es
+    - value: en|es
     slot_uri: dc:language
   issued:
     is_a: core field
@@ -247,7 +262,7 @@ slots:
     multivalued: true
     examples:
     - value: scientists
-    - value: scientists | classroom | managers
+    - value: scientists|classroom|managers
     slot_uri: dc:audience
   publisher:
    is_a: core field
