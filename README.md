@@ -7,3 +7,4 @@ This repository is maintained by the Better Biomolecular Ocean Practices (BeBOP)
 
 Please consult model/schema/terms.yaml for the term specifications
 
+[![DOI](https://zenodo.org/badge/480537172.svg)](https://zenodo.org/badge/latestdoi/480537172)
