@@ -69,8 +69,8 @@ slots:
     title: purpose
     description: > 
       Terms to describe the purpose of the omics research. This field accepts ontology terms from the 
-      Ontology for Biomedical Investigations (OBI). For a browser of OBI (v 2022-07-11) terms, please see 
-      https://www.ebi.ac.uk/ols/ontologies/obi.
+      Ontology for Biomedical Investigations (OBI). For a browser of OBI (v 2024-06-10) terms, please see 
+      https://www.ebi.ac.uk/ols4/ontologies/obi.
     range: string
     multivalued: true
     examples:
@@ -82,8 +82,8 @@ slots:
     title: analyses
     description: >
       Terms to describe the types of analyses used in the protocol. This field accepts ontology terms from the 
-      Ontology for Biomedical Investigations (OBI). For a browser of OBI (v 2022-07-11) terms, please see 
-      https://www.ebi.ac.uk/ols/ontologies/obi.
+      Ontology for Biomedical Investigations (OBI). For a browser of OBI (v 2024-06-10) terms, please see 
+      https://www.ebi.ac.uk/ols4/ontologies/obi.
     range: string
     multivalued: true
     examples:
@@ -178,8 +178,8 @@ slots:
       Terms to identify the key resources needed to complete the protocol. When possible 
       use controlled vocabuliaries using (namespace:ID).
       This field accepts ontology terms from the Ontology for Biomedical Investigations (OBI)
-      and/or the Experimental Factor Ontology (EFO). For a browser of OBI (v 2022-07-11) terms, please see 
-      https://www.ebi.ac.uk/ols/ontologies/obi; for a browser of EFO (v 3.49.0) terms, please see
+      and/or the Experimental Factor Ontology (EFO). For a browser of OBI (v 2024-06-10) terms, please see 
+      https://www.ebi.ac.uk/ols4/ontologies/obi; for a browser of EFO (v 3.49.0) terms, please see
       https://www.ebi.ac.uk/ols/ontologies/efo. 
     range: string
     multivalued: true
